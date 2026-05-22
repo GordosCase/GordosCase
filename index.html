@@ -22,13 +22,11 @@
   html{scroll-behavior:smooth}
   body{background:var(--dark);color:#fff;font-family:'Nunito',sans-serif;overflow-x:hidden}
 
-  /* BLOBS DE FONDO */
   .blob{position:fixed;border-radius:50%;filter:blur(80px);opacity:0.15;pointer-events:none;z-index:0}
   .blob1{width:500px;height:500px;background:var(--pink);top:-100px;left:-100px}
   .blob2{width:400px;height:400px;background:var(--blue);bottom:-80px;right:-80px}
   .blob3{width:300px;height:300px;background:var(--purple);top:40%;left:40%}
 
-  /* NAV */
   nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1rem 2.5rem;display:flex;justify-content:space-between;align-items:center;background:rgba(13,13,13,0.85);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,0.06)}
   .logo{font-family:'Bebas Neue',sans-serif;font-size:2rem;letter-spacing:0.12em;background:linear-gradient(90deg,var(--pink),var(--cyan),var(--yellow));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
   .nav-links{display:flex;gap:1.8rem;list-style:none}
@@ -37,7 +35,6 @@
   .nav-btn{background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;padding:0.55rem 1.5rem;border-radius:50px;font-size:0.8rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;transition:transform 0.2s,box-shadow 0.2s;box-shadow:0 4px 20px rgba(255,60,172,0.4)}
   .nav-btn:hover{transform:scale(1.05);box-shadow:0 6px 28px rgba(255,60,172,0.6)}
 
-  /* HERO */
   .hero{min-height:100vh;padding:7rem 2.5rem 4rem;position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
   .hero-left{flex:1;min-width:280px;max-width:540px}
   .badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:50px;padding:0.4rem 1.1rem;font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--cyan);margin-bottom:1.5rem}
@@ -58,7 +55,6 @@
   .stat-num{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;background:linear-gradient(135deg,var(--yellow),var(--orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
   .stat-label{font-size:0.72rem;color:rgba(255,255,255,0.45);letter-spacing:0.1em;text-transform:uppercase}
 
-  /* HERO MOSAICO */
   .hero-right{flex:1;min-width:280px;max-width:480px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:1rem}
   .mosaic-img{border-radius:16px;overflow:hidden;position:relative}
   .mosaic-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s}
@@ -68,14 +64,12 @@
   .mosaic-img.short img{height:150px}
   .mosaic-label{position:absolute;bottom:0;left:0;right:0;padding:0.6rem 0.8rem;background:linear-gradient(to top,rgba(0,0,0,0.8),transparent);font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#fff}
 
-  /* MARQUEE */
   .marquee-wrap{background:linear-gradient(90deg,var(--pink),var(--purple),var(--blue),var(--cyan),var(--green),var(--yellow),var(--orange),var(--pink));padding:0.7rem 0;overflow:hidden;position:relative;z-index:1}
   .marquee-track{display:flex;gap:2.5rem;animation:marquee 20s linear infinite;white-space:nowrap;width:max-content}
   @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
   .marquee-item{font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:0.2em;color:#fff;display:flex;align-items:center;gap:1rem}
   .marquee-dot{width:6px;height:6px;background:#fff;border-radius:50%;opacity:0.6}
 
-  /* PRODUCTOS */
   .products{padding:5rem 2.5rem;position:relative;z-index:1}
   .section-head{text-align:center;margin-bottom:3rem}
   .section-tag{font-size:0.72rem;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:var(--cyan);margin-bottom:0.5rem}
@@ -99,10 +93,11 @@
   .prod-body{padding:1.2rem}
   .prod-name{font-size:1.05rem;font-weight:700;margin-bottom:0.3rem;color:#fff}
   .prod-desc{font-size:0.78rem;color:rgba(255,255,255,0.5);line-height:1.55;margin-bottom:0.9rem}
-  .prod-tag{display:inline-block;font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.3rem 0.8rem;border-radius:50px;background:rgba(255,255,255,0.07);color:var(--acc);border:1px solid var(--acc);transition:all 0.2s}
+
+  /* BOTON VER OPCIONES — ahora es un enlace al catalogo PDF */
+  .prod-tag{display:inline-block;font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.3rem 0.8rem;border-radius:50px;background:rgba(255,255,255,0.07);color:var(--acc);border:1px solid var(--acc);transition:all 0.2s;text-decoration:none;cursor:pointer}
   .prod-card:hover .prod-tag{background:var(--acc);color:#000}
 
-  /* POR QUE */
   .why{padding:5rem 2.5rem;position:relative;z-index:1;background:linear-gradient(135deg,rgba(255,60,172,0.05),rgba(43,134,197,0.05))}
   .why-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1.5rem;margin-top:3rem}
   .why-card{background:var(--card2);border-radius:16px;padding:1.8rem 1.5rem;border:1px solid rgba(255,255,255,0.06);text-align:center;transition:transform 0.3s,border-color 0.3s}
@@ -115,7 +110,6 @@
   .why-title2{font-size:1rem;font-weight:700;margin-bottom:0.4rem}
   .why-text{font-size:0.8rem;color:rgba(255,255,255,0.5);line-height:1.6}
 
-  /* CONTACTO */
   .contact{padding:5rem 2.5rem;position:relative;z-index:1}
   .contact-box{background:linear-gradient(135deg,var(--card),var(--card2));border-radius:24px;padding:3rem;border:1px solid rgba(255,255,255,0.06);display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
   .contact-title{font-family:'Bebas Neue',sans-serif;font-size:3rem;letter-spacing:0.06em;margin-bottom:0.5rem;line-height:1}
@@ -132,12 +126,10 @@
   .soc-btn.tt{background:linear-gradient(135deg,#010101,#69C9D0);box-shadow:0 4px 15px rgba(105,201,208,0.3)}
   .soc-btn:hover{transform:translateY(-2px)}
 
-  /* FOOTER */
   footer{padding:2rem 2.5rem;border-top:1px solid rgba(255,255,255,0.06);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;position:relative;z-index:1}
   .footer-logo{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:0.12em;background:linear-gradient(90deg,var(--pink),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
   .footer-copy{font-size:0.75rem;color:rgba(255,255,255,0.3)}
 
-  /* RESPONSIVE */
   @media(max-width:768px){
     nav{padding:1rem 1.2rem}
     .nav-links{display:none}
@@ -157,7 +149,6 @@
 <div class="blob blob2"></div>
 <div class="blob blob3"></div>
 
-<!-- ===================== NAV ===================== -->
 <nav>
   <div class="logo">Gordos Case</div>
   <ul class="nav-links">
@@ -165,37 +156,28 @@
     <li><a href="#nosotros">Nosotros</a></li>
     <li><a href="#contacto">Contacto</a></li>
   </ul>
-  <!-- CAMBIA EL LINK DEL BOTON AQUI -->
   <a href="#contacto" class="nav-btn">📲 Pedir ahora</a>
 </nav>
 
-<!-- ===================== HERO ===================== -->
 <section class="hero" id="inicio">
   <div class="hero-left">
     <div class="badge">
       <span class="badge-dot"></span>
       Disponible ahora
     </div>
-
-    <!-- TITULO PRINCIPAL — cambia el texto aqui -->
     <h1>
       <span class="g1">PROTEGE</span><br>
       <span class="g2">TU CELULAR</span><br>
       <span class="g3">CON ESTILO</span>
     </h1>
-
-    <!-- SUBTITULO — cambia el texto aqui -->
     <p class="hero-sub">
       Fundas, cargadores, cristales, audífonos y mucho más.
       Los mejores accesorios para tu celular en Chihuahua.
     </p>
-
     <div class="hero-btns">
       <a href="#productos" class="btn-grad">Ver productos 🔥</a>
       <a href="#contacto" class="btn-outline">WhatsApp 💬</a>
     </div>
-
-    <!-- ESTADISTICAS — cambia los numeros aqui -->
     <div class="stats">
       <div class="stat">
         <div class="stat-num">500+</div>
@@ -211,9 +193,6 @@
       </div>
     </div>
   </div>
-
-  <!-- MOSAICO DE IMAGENES DEL HERO -->
-  <!-- Para cambiar una foto: reemplaza la URL dentro de src="..." -->
   <div class="hero-right">
     <div class="mosaic-img tall">
       <img src="https://down-mx.img.susercontent.com/file/5262e6ac66124d5f14224080c79acf8c" alt="Fundas de celular coloridas">
@@ -230,7 +209,6 @@
   </div>
 </section>
 
-<!-- ===================== MARQUEE ===================== -->
 <div class="marquee-wrap">
   <div class="marquee-track">
     <span class="marquee-item">FUNDAS<span class="marquee-dot"></span></span>
@@ -241,7 +219,6 @@
     <span class="marquee-item">CORREAS APPLE WATCH<span class="marquee-dot"></span></span>
     <span class="marquee-item">TERMOS OWALA<span class="marquee-dot"></span></span>
     <span class="marquee-item">MICA PARA LENTE<span class="marquee-dot"></span></span>
-    <!-- Se repite para efecto infinito -->
     <span class="marquee-item">FUNDAS<span class="marquee-dot"></span></span>
     <span class="marquee-item">CARGADORES<span class="marquee-dot"></span></span>
     <span class="marquee-item">CRISTALES<span class="marquee-dot"></span></span>
@@ -253,101 +230,90 @@
   </div>
 </div>
 
-<!-- ===================== PRODUCTOS ===================== -->
 <section class="products" id="productos">
   <div class="section-head">
     <div class="section-tag">🛍️ Lo que tenemos para ti</div>
     <h2 class="section-title">Nuestros <span>Productos</span></h2>
     <p class="section-sub">Todo lo que tu celular necesita, en un solo lugar. Calidad real, precios justos.</p>
   </div>
-
   <div class="prod-grid">
 
-    <!-- ===== PRODUCTO 1 — FUNDAS ===== -->
-    <!-- Para usar tu propia foto: cambia la URL de src por la ruta local, ej: src="fotos/fundas.jpeg" -->
     <div class="prod-card">
       <img class="prod-img" src="fotos/fundas.jpeg" alt="Fundas de celular">
       <div class="prod-body">
         <div class="prod-name">📱 Fundas</div>
         <div class="prod-desc">Transparentes, con diseño, antigolpe y más. Para todos los modelos iPhone y Android.</div>
-        <span class="prod-tag">Ver opciones →</span>
+        <!-- BOTON QUE ABRE EL CATALOGO PDF -->
+        <a href="catalogo.pdf" target="_blank" class="prod-tag">Ver catálogo 📄 →</a>
       </div>
     </div>
 
-    <!-- ===== PRODUCTO 2 — CARGADORES ===== -->
     <div class="prod-card">
       <img class="prod-img" src="fotos/cargadores.jpeg" alt="Cargadores">
       <div class="prod-body">
         <div class="prod-name">⚡ Cargadores</div>
         <div class="prod-desc">Carga rápida, inalámbrica y cables tipo C, lightning y más.</div>
-        <span class="prod-tag">Ver opciones →</span>
+        <a href="catalogo.pdf" target="_blank" class="prod-tag">Ver catálogo 📄 →</a>
       </div>
     </div>
 
-    <!-- ===== PRODUCTO 3 — CRISTALES ===== -->
     <div class="prod-card">
       <img class="prod-img" src="fotos/cristales-templados.jpeg" alt="Cristales templados">
       <div class="prod-body">
         <div class="prod-name">🔷 Cristales Templados</div>
         <div class="prod-desc">Dureza 9H anti-arañazos. Protección máxima para tu pantalla.</div>
-        <span class="prod-tag">Ver opciones →</span>
+        <a href="catalogo.pdf" target="_blank" class="prod-tag">Ver catálogo 📄 →</a>
       </div>
     </div>
 
-    <!-- ===== PRODUCTO 4 — PILAS PORTATILES ===== -->
     <div class="prod-card">
       <img class="prod-img" src="fotos/pilas-portatiles.jpeg" alt="Pilas portátiles">
       <div class="prod-body">
         <div class="prod-name">🔋 Pilas Portátiles</div>
         <div class="prod-desc">Power banks de alta capacidad para cargar donde sea.</div>
-        <span class="prod-tag">Ver opciones →</span>
+        <a href="catalogo.pdf" target="_blank" class="prod-tag">Ver catálogo 📄 →</a>
       </div>
     </div>
 
-    <!-- ===== PRODUCTO 5 — MICA PARA LENTE ===== -->
     <div class="prod-card">
       <img class="prod-img" src="fotos/mica-para-lente.jpeg" alt="Mica para lente">
       <div class="prod-body">
         <div class="prod-name">🔬 Mica para Lente</div>
         <div class="prod-desc">Protege la cámara trasera de tu celular con micras de precisión.</div>
-        <span class="prod-tag">Ver opciones →</span>
+        <a href="catalogo.pdf" target="_blank" class="prod-tag">Ver catálogo 📄 →</a>
       </div>
     </div>
 
-    <!-- ===== PRODUCTO 6 — AUDIFONOS ===== -->
     <div class="prod-card">
       <img class="prod-img" src="fotos/audifonos.jpeg" alt="Audífonos">
       <div class="prod-body">
         <div class="prod-name">🎧 Audífonos</div>
         <div class="prod-desc">Con cable y inalámbricos. Sonido de calidad para tu día.</div>
-        <span class="prod-tag">Ver opciones →</span>
+        <a href="catalogo.pdf" target="_blank" class="prod-tag">Ver catálogo 📄 →</a>
       </div>
     </div>
 
-    <!-- ===== PRODUCTO 7 — CORREAS APPLE WATCH ===== -->
     <div class="prod-card">
       <img class="prod-img" src="fotos/correas-apple-watch.jpeg" alt="Correas Apple Watch">
       <div class="prod-body">
         <div class="prod-name">⌚ Correas Apple Watch</div>
         <div class="prod-desc">Silicón, cuero y más. Personaliza tu Apple Watch con estilo.</div>
-        <span class="prod-tag">Ver opciones →</span>
+        <a href="catalogo.pdf" target="_blank" class="prod-tag">Ver catálogo 📄 →</a>
       </div>
     </div>
 
-    <!-- ===== PRODUCTO 8 — TERMOS OWALA ===== -->
     <div class="prod-card">
       <img class="prod-img" src="fotos/termos-owala.jpeg" alt="Termos Owala">
       <div class="prod-body">
         <div class="prod-name">🥤 Termos Owala</div>
         <div class="prod-desc">Originales Owala en múltiples colores. Hidratación con estilo.</div>
-        <span class="prod-tag">Ver opciones →</span>
+        <a href="catalogo.pdf" target="_blank" class="prod-tag">Ver catálogo 📄 →</a>
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- ===================== POR QUE NOSOTROS ===================== -->
 <section class="why" id="nosotros">
   <div class="section-head">
     <div class="section-tag">💎 ¿Por qué Gordos Case?</div>
@@ -377,7 +343,6 @@
   </div>
 </section>
 
-<!-- ===================== CONTACTO ===================== -->
 <section class="contact" id="contacto">
   <div class="contact-box">
     <div>
@@ -387,17 +352,13 @@
         También nos encuentras en redes sociales como <strong>Gordos Case</strong>.
       </p>
       <div class="social-row">
-        <!-- CAMBIA EL LINK DE FACEBOOK AQUI -->
         <a href="https://www.facebook.com/share/1CmqqegdWD/?mibextid=wwXIfr" class="soc-btn fb" target="_blank">📘 Facebook</a>
-        <!-- CAMBIA EL LINK DE INSTAGRAM AQUI -->
         <a href="https://www.instagram.com/gordoscase/" class="soc-btn ig" target="_blank">📸 Instagram</a>
-        <!-- CAMBIA EL LINK DE TIKTOK AQUI -->
         <a href="https://www.tiktok.com/@GordosCase" class="soc-btn tt" target="_blank">🎵 TikTok</a>
       </div>
     </div>
     <div>
       <div class="wa-btns">
-        <!-- NUMERO DE WHATSAPP 1 — el numero va despues de wa.me/52 -->
         <a href="https://wa.me/526147622862" class="wa-btn" target="_blank">
           <span class="wa-icon">💬</span>
           <div class="wa-info">
@@ -405,7 +366,6 @@
             <small>Toca para abrir WhatsApp</small>
           </div>
         </a>
-        <!-- NUMERO DE WHATSAPP 2 -->
         <a href="https://wa.me/526142955152" class="wa-btn" target="_blank">
           <span class="wa-icon">💬</span>
           <div class="wa-info">
@@ -418,13 +378,10 @@
   </div>
 </section>
 
-<!-- ===================== FOOTER ===================== -->
 <footer>
   <div class="footer-logo">Gordos Case</div>
-  <!-- CAMBIA EL AÑO O TEXTO DEL FOOTER AQUI -->
   <div class="footer-copy">© 2025 Gordos Case — Chihuahua, México 🇲🇽</div>
 </footer>
 
 </body>
 </html>
-
